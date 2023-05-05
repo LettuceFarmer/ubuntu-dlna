@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  dlna-server:
+    image: dlna
+    container_name: dlna
+    restart: always
+    ports:
+      - "8200:8200"
+    volumes:
+      - /etc:/media
