@@ -1,4 +1,4 @@
-# MMserver
+# Ubuntu-dlna
 
 Paso 1: Crear la imagen a partir del dockerfile con el comando:
   - docker build -t dlna .
