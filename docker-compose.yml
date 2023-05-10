@@ -2,10 +2,20 @@ version: "3"
 
 services:
   dlna-server:
-    image: dlna
-    container_name: dlna
-    restart: always
-    ports:
-      - "8200:8200"
+    build: .
     volumes:
-      - /etc:/media
+      - /data:/opt
+    ports:
+      - "8200:8200/udp"
+      - "8200:8200/tcp"
+    networks:
+      static:
+        ipv4_address: 10.5.0.5
+      
+networks:
+  static:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1
