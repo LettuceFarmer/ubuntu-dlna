@@ -2,6 +2,9 @@
 
 Paso 1: Crear la imagen a partir del dockerfile con el comando:
   - docker build -t dlna .
+
+Paso 1 (ALTERNATIVO): Crear la imagen a partir del docker-compose.yml
+  - docker-compose build
   
 Paso 2: Crear un contenedor a partir de la imagen dlna utilizando el docker-compose.yml con el comando:
   - docker-compose up -d

@@ -1,17 +1,23 @@
 version: "3"
 
+#Indiquem el servei dlna
 services:
   dlna-server:
+    #indiquem que utilitzi la nostra imatge que es troba al mateix directori que el docker-compose
     build: .
+    #indiquem que el data es troba a la mateixa ruta que el opt per tal de fer redundancia i asegurar que es trobin els arxius
     volumes:
       - /data:/opt
     ports:
+    #indiquem el redireccionament de ports i el tipus
       - "8200:8200/udp"
       - "8200:8200/tcp"
+    #indiquem la subxarxa que utilitzara el contenidor i la seba IP statica
     networks:
       static:
         ipv4_address: 10.5.0.5
-      
+
+#creem una network per de fer que la maquina tingui sempre la mateixa xarxa e ip
 networks:
   static:
     driver: bridge
