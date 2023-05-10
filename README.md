@@ -11,6 +11,7 @@ Paso 2: Crear un contenedor a partir de la imagen dlna utilizando el docker-comp
 
 Paso 3: Abrir la extension Desktop de codespace de Jupyterlab, instalar vlc i seguir los siguientes subpasos:
   - Paso 3.1: Abrir VLC
-  - Paso 3.2: Clicar en "Media" -> Seleccionar " Abrir ubicación en la red " -> insertar " http://localhost:8200 " y con esto se mostraran los archivos que se pueden
-              reproducir (en mi caso solo seria el archivo " video.mp4 ".
+  - Paso 3.2: Clicar en VIEW -> Seleccionar "Add Interface" -> Clicar "Web"
+  - Paso 3.3: Clicar en "Media" -> Seleccionar " Open network stream " -> insertar " http://localhost:8200 " -> Clicar en "Play" y con esto se mostraran los archivos que se pueden reproducir (en mi caso solo seria el archivo " video.mp4 ")
+  
     
